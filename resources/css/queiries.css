@@ -8,23 +8,32 @@
     div#menu {
         width: 80%;
     }
+    #menu-options-overlay h3 {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
     #navigation .mobile-menu .icon{
         padding: 0 8px;
     }
-}
-@media (max-width: 576px) {
+
+    #menu div:nth-last-child(-n+3) {
+        display: none;
+    }
     div#menu {
         width: 100%;
         margin-top: 1rem;
     }
-    #navigation #menu div:nth-last-child(-n+3) {
-        display: none;
-    }
-
     #menu div {
         padding: 5px 0;
     }
+
+    .icon.ion-ios-close {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 576px) {
+   
 }

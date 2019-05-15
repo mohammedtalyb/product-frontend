@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="resources/css/app.css">
     <link rel="stylesheet" href="resources/css/queiries.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
 </head>
+
 <body>
     <header class="px-md-5 px-3 pb-2 pt-3 py-md-4 px-sm-4 ml-md-5 bg-white" id="navigation">
         <div class="mobile-menu d-flex justify-content-between d-md-none">
             <div onclick="clickMenu()">
-                <a href="#"><i class="icon ion-ios-menu"></i></a>
+                <a href="#"><i class="icon ion-ios-menu" id="menuButton"></i></a>
             </div>
             <div>
                 <a href="#" class="logo"><img src="./resources/images/1_Apple_400.png" alt=""></a>
@@ -27,7 +30,7 @@
             </div>
         </div>
         <a href="#" class="navbar-brand d-none d-md-block"><img src="./resources/images/1_Apple_400.png" alt=""></a>
-        <div class="d-md-flex text-center justify-content-between ml-md-auto align-items-center d-none" id="menu">
+        <div class="d-md-flex text-center justify-content-between  ml-md-auto align-items-center d-none" id="menu">
             <div class="">
                 <a href="#" class="">bedroom</a>
             </div>
@@ -54,6 +57,75 @@
             </div>
         </div>
     </header>
+
+    <div class="ml-5 mb-md-5 d-none d-md-block">
+        <ul class="directory nav mt-5">
+            <li><i class="icon ion-ios-home"></i></li>
+            <li><i class="icon ion-ios-play"></i></li>
+            <li>CATALOG</li>
+            <li><i class="icon ion-ios-play"></i></li>
+            <li>SOFAS</li>
+            <li><i class="icon ion-ios-play"></i></li>
+            <li>BEIGE NUDIE SOFA</li>
+        </ul>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-12 sidebar d-none d-md-block mt-md-5">
+                <div class="d-flex flex-column align-items-end">
+                    <div class="">
+                        <a href="#">DETAILS</a>
+                    </div>
+                    <div class=""><a href="#">DESCRIPTION</a></div>
+                    <div class=""><a href="#">REVIEWS</a></div>
+                    <div class=""><a href="#">CUSTOMTAB</a></div>
+                    <div class="">
+                        <ul class="nav">
+                            <li><i class="icon ion-logo-facebook"></i></li>
+                            <li><i class="icon ion-logo-twitter"></i></li>
+                            <li><i class="icon ion-logo-pinterest"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="menu-options-overlay">
+                    <h3>Details</h3>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+
+            <div class="col-12 col-md-8">
+                <div class="row bg-white ">
+                    <div class="col-12 col-md-5 bg-white details">
+                        <div class="square">
+                            <img src="resources/images/nathan-fertig-249917-unsplash.jpg" class="" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-12 ml-5">
+                        <h2>Lorem, ipsum dolor.</h2>
+                    </div>
+                </div>
+                <div class="row bg-white ">
+                    <div class="col-md-2" style="background-color: #e3e3e3a2"></div>
+                    <div class="col-12 col-md-6 bg-white details ">
+                        <div class="square">
+                            <img src="resources/images/annie-spratt-294447-unsplash.jpg" class="" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
     <script src="resources/js/app.js"></script>
 </body>
+
 </html>
