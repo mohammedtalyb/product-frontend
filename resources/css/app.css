@@ -1,0 +1,38 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #e3e3e367;
+}
+
+/* //navigation// */
+
+header img {
+    width: 30px;
+    height: auto;
+}
+
+header #menu {
+    margin-top: -40px;
+}
+
+header #menu div:not(:nth-last-child(-n+3)) a {
+    color: black;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 3px 0;
+}
+
+header #menu div:hover:not(:nth-last-child(-n+3)){
+    background: linear-gradient(to bottom,white 40%,#ffdd0096);
+}
+
+header div .icon{
+    font-size: 24px;
+    color: black;
+}
+
+div#menu{
+    width: 50%;
+}

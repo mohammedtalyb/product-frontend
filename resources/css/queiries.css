@@ -1,0 +1,30 @@
+@media (max-width: 1200px) {
+    div#menu {
+        width: 60%;
+    }
+}
+
+@media (max-width: 950px) {
+    div#menu {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    #navigation .mobile-menu .icon{
+        padding: 0 8px;
+    }
+}
+@media (max-width: 576px) {
+    div#menu {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    #navigation #menu div:nth-last-child(-n+3) {
+        display: none;
+    }
+
+    #menu div {
+        padding: 5px 0;
+    }
+}
