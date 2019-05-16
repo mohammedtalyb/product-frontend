@@ -8,10 +8,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
     <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="resources/css/app.css">
     <link rel="stylesheet" href="resources/css/queiries.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
 </head>
 
 <body>
@@ -70,9 +72,16 @@
         </ul>
     </div>
 
+    <ul class="nav d-md-none" id="product-mobile-menu">
+        <li class="active"><a>DETAILS</a></li>
+        <li><a href="#">DESCRIPTION</a></li>
+        <li><a href="#">REVIEWS</a></li>
+        <li><a href="#">RELATED</a></li>
+    </ul>
+
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3 col-12 sidebar d-none d-md-block mt-md-5">
+            <div class="col-md-2 col-lg-3 col-12 sidebar d-none d-md-block mt-md-5">
                 <div class="d-flex flex-column align-items-end">
                     <div class="">
                         <a href="#">DETAILS</a>
@@ -88,31 +97,75 @@
                         </ul>
                     </div>
                 </div>
-                <div id="menu-options-overlay">
+                <div id="menu-options-overlay" class="d-none d-lg-block">
                     <h3>Details</h3>
                 </div>
             </div>
             <div class="col-md-1"></div>
 
-            <div class="col-12 col-md-8">
-                <div class="row bg-white ">
-                    <div class="col-12 col-md-5 bg-white details">
+            <div class="col-12 col-md-9 col-lg-8 col-sm-12">
+                <div class="row bg-white product mt-5 mt-md-0 ml-sm-4 ml-md-0">
+                    <div class="col-12 col-md-7 col-sm-6 bg-white product-image">
                         <div class="square">
                             <img src="resources/images/nathan-fertig-249917-unsplash.jpg" class="" alt="">
                         </div>
                     </div>
-                    <div class="col-md-5 col-12 ml-5">
-                        <h2>Lorem, ipsum dolor.</h2>
+                    <div class="col-md-5 col-sm-6 col-12 pl-5 pl-sm-0 product-details pt-0 mt-lg-5">
+                        <h2><b>Nudie Extendable
+                                <br>
+                                Sofa for 3 persons.
+                            </b>
+                        </h2>
+                        <div class="ratings">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="ml-2 text-muted">(23)</span>
+                        </div>
+                        <div class="price mt-3">
+                            <p>
+                                <span class="strikethrough">$249</span> 
+                                <span><b>$183</b></span>
+                            </p>
+                        </div>
+                        <hr>
+                        <ul class="specification pl-3 py-2">
+                            <li class="mb-2"><span class=""><b> ASSEMBLY: </b></span> <span> Carpenter Assembly</span></li>
+                            <li><span class=""><b> WARRANTY: </b></span> <span> 12 Months Warranty</span></li>
+                        </ul>
+                        <hr>
+                        <ul class="deliveryAndPolicy nav justify-content-between my-4 pl-0">
+                            <li><i class="icon ion-ios-car"></i></li>
+                            <li class=""><b>SAME DAY<br>DISPATCH</b></li>
+                            <li><i class="icon ion-ios-refresh"></i></li>
+                            <li class=""><b>EASY-30 DAY<br>RETURN POLICY</b></li>
+                        </ul>
+                        <div class="product-color mt-3">
+                            <p><b>COLOR:</b></p>
+                            <ul class="nav">
+                                <li style="background-color: #7969055d;"></li>
+                                <li style="background-color: black;"><i class="icon ion-ios-checkmark"></i></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                        <ul class="quantity nav my-4">
+                            <li style="color: #47474793; cursor: pointer;">&mdash;</li>
+                            <li>1</li>
+                            <li style="color: #47474793; cursor: pointer;">&#43;</li>
+                            <li style="cursor: pointer"><b>ADD TO CART</b></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="row bg-white ">
+                <!-- <div class="row bg-white ">
                     <div class="col-md-2" style="background-color: #e3e3e3a2"></div>
                     <div class="col-12 col-md-6 bg-white details ">
                         <div class="square">
                             <img src="resources/images/annie-spratt-294447-unsplash.jpg" class="" alt="">
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
