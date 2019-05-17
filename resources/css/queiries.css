@@ -14,6 +14,21 @@
     .quantity li:last-of-type {
         padding: 0.4rem 2rem;
     }
+
+    .description-text p {
+        font-size: 0.84rem;
+        ;
+    }
+
+    .description-heading {
+        width: 52%;
+        padding: 0.8rem 0;
+    }
+
+    .description-heading h2 {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -51,12 +66,27 @@
         height: 15px;
         width: 15px;
     }
+
+    .description-text p {
+        font-size: 0.84rem;
+        padding: 0 15px;
+        top: 30%;
+    }
+
+    .description-heading {
+        width: 58%;
+        padding: 0.7rem 0;
+    }
+
+    .description-heading h2 {
+        font-size: 1.5rem;
+    }
 }
 
 
 @media (max-width: 768px) {
     #navigation .mobile-menu .icon {
-        padding: 0 8px;
+        padding: 0 13px;
     }
 
     #menu div:nth-last-child(-n+3) {
@@ -75,6 +105,28 @@
     .icon.ion-ios-close {
         font-size: 32px;
     }
+    .square img {
+        left: -16%;
+    }
+    .description {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    .description-text p {
+        font-size: 0.84rem;
+        padding: 0 15px;
+    }
+
+    .description-heading {
+        width: 56%;
+        padding: 0.5rem 0;
+    }
+
+    .description-heading h2 {
+        font-size: 1.2rem;
+        padding-left: 30px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -82,15 +134,48 @@
         margin-left: 4px;
         margin-right: 4px;
     }
+
     .square img {
-        top: -20%;
+        top: 32%;
         left: 0;
     }
 
     .product-details h2 {
         font-size: 1.6rem;
     }
+
     .deliveryAndPolicy {
         max-width: 80%;
+    }
+
+    .description {
+        margin: 0 4px;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        background-color: white;
+        transform: scale(1);
+    }
+
+    .description-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .description-text p {
+        font-size: 0.84rem;
+        padding: 0;
+        padding-right: 20px;
+    }
+
+    .description-heading {
+        position: relative;
+        width: 100%;
+        background: white;
+    }
+
+    .description-heading h2 {
+        font-size: 1.5rem;
+        padding: 0;
+        line-height: 30px;
     }
 }
