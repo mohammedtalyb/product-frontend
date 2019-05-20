@@ -161,10 +161,14 @@ div#menu {
 /* //product-details */
 
 .product {
-    margin-bottom: 9rem;
+    margin-bottom: 7rem;
     margin-top: 5rem;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    padding: 0;
+    padding-left: 7rem;
+}
+
+.product-image {
+    padding: 0;
 }
 
 .square {
@@ -179,10 +183,14 @@ div#menu {
 .square img {
     position: absolute;
     width: 100%;
-    height: 95%;
+    height: 90%;
     left: -12%;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.product-details {
+    padding: 3rem 0;
 }
 
 .product-details h2 {
