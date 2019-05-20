@@ -10,3 +10,12 @@ function clickMenu() {
         menuButton.classList.add('ion-ios-menu');
     }
 }
+
+function play(event) {
+    var video = document.querySelector('#myVideo');
+    var playButton = document.querySelector('#play');
+    event.preventDefault();
+    playButton.style.display = "none";
+    video.play();
+
+}

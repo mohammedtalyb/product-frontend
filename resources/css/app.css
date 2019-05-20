@@ -116,9 +116,9 @@ div#menu {
 
 .sidebar {
     position: sticky;
-    top: 16rem;
+    top: 17rem;
     z-index: 1000;
-    height: calc(100vh - 16rem);
+    height: calc(100vh - 20rem);
     /* top: 25%;
     z-index:100; */
 }
@@ -161,6 +161,8 @@ div#menu {
 /* //product-details */
 
 .product {
+    margin-bottom: 9rem;
+    margin-top: 5rem;
     padding-top: 18px;
     padding-bottom: 18px;
 }
@@ -291,6 +293,7 @@ hr {
     margin-top: 6rem;
     margin-bottom: 6rem;
     transform: scaleY(1.1);
+    padding-right: 0px;
     background-color: #f0f0f0;
 }
 
@@ -314,13 +317,137 @@ hr {
     left: 0;
     background: #f0f0f0;
     z-index: 100;
-    width: 48%;
-    padding: 1.4rem 0;
+    width: 50%;
+    padding: 1.5rem 0;
 }
 
 .description-heading h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 2px;
     padding-left: 40px;
+}
+
+/*product-vide */
+
+.product-video {
+    padding: 6rem 0;
+    padding-left: 4rem;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.video-title-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 46%;
+    z-index: 11;
+    background-color: #f0f0f0;
+}
+
+.video-title-overlay h2 {
+    font-weight: 700;
+    padding: 1.8rem 0;
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+    padding-right: 20px;
+}
+
+.play-button-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+}
+
+.product-video a i.icon {
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    padding: 25px 35px;
+    border-radius: 50%;
+    background-image:
+        radial-gradient(circle closest-side,
+            #ffdd00 60%,
+            #ffdd0036 40%);
+}
+
+/*extra photo */
+.extra-photo {
+    margin: 6rem 0;
+    padding-left: 7rem;
+}
+
+.image-overlay img {
+    position: absolute;
+    top: 59%;
+    left: 6%;
+    width: 35%;
+    height: 35%;
+}
+
+.download-pdf {
+    position: absolute;
+    top: 84%;
+    left: 75%;
+    width: 25%;
+    height: 16%;
+    background-color: #ffd900;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.download-pdf a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color: black;
+    text-decoration: none;
+}
+
+.download-pdf a .icon {
+    font-size: 32px;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 14%;
+    left: -3%;
+    transform: rotate(-90deg);
+}
+
+.text-overlay p span {
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.text-overlay span::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: 100%;
+    margin-right: 10px;
+    width: 80px;
+    border-bottom: 1px solid black;
 }

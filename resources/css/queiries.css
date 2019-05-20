@@ -29,6 +29,19 @@
         font-size: 1.5rem;
         letter-spacing: 1px;
     }
+
+    .extra-photo img {
+        transform: scaleY(1.1);
+    }
+
+    .image-overlay img {
+        top: 65%;
+        left: 8%;
+    }
+
+    .download-pdf {
+        top: 89%;
+    }
 }
 
 @media (max-width: 992px) {
@@ -38,6 +51,11 @@
 
     .sidebar div ul li {
         margin-left: 10px;
+    }
+
+    .product {
+        margin-bottom: 8rem;
+        margin-top: 5rem;
     }
 
     .product-details h2 {
@@ -80,6 +98,36 @@
 
     .description-heading h2 {
         font-size: 1.5rem;
+        padding-left: 30px;
+    }
+
+    .video-title-overlay {
+        width: 50%;
+    }
+
+    .video-title-overlay h2 {
+        letter-spacing: 1px;
+        padding: 1.2rem 0;
+        padding-right: 15px;
+    }
+
+    .product-video a i.icon {
+        padding: 15px 25px;
+    }
+
+    .extra-photo {
+        margin-top: 5rem;
+        padding-left: 5rem;
+    }
+
+    .image-overlay img {
+        top: 59%;
+        left: 5%;
+    }
+
+    .download-pdf a .icon {
+        margin-right: 10px;
+        font-size: 24px;
     }
 }
 
@@ -102,12 +150,19 @@
         padding: 5px 0;
     }
 
+    .product {
+        margin-bottom: 7rem;
+        margin-top: 4rem;
+    }
+
     .icon.ion-ios-close {
         font-size: 32px;
     }
+
     .square img {
         left: -16%;
     }
+
     .description {
         margin-top: 5rem;
         margin-bottom: 5rem;
@@ -127,12 +182,47 @@
         font-size: 1.2rem;
         padding-left: 30px;
     }
+
+    .product-video {
+        padding: 4rem 0;
+        padding-left: 2rem;
+    }
+
+    .video-title-overlay h2 {
+        padding: 1rem 0;
+        font-size: 1.3rem;
+        padding-right: 15px;
+    }
+
+    .extra-photo {
+        padding-left: 3rem;
+        margin-top: 4rem;
+    }
+
+    .image-overlay img {
+        top: 59%;
+        left: 3%;
+    }
+
+    .download-pdf a {
+        font-size: 12px;
+    }
+
+    .download-pdf a .icon {
+        margin-right: 5px;
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 576px) {
+    #navigation .mobile-menu .icon {
+        padding: 0 8px;
+    }
+
     .product {
         margin-left: 4px;
         margin-right: 4px;
+        margin-bottom: 5rem;
     }
 
     .square img {
@@ -161,6 +251,10 @@
         height: auto;
     }
 
+    .description-image {
+        padding-bottom: 2rem;
+    }
+
     .description-text p {
         font-size: 0.84rem;
         padding: 0;
@@ -177,5 +271,64 @@
         font-size: 1.5rem;
         padding: 0;
         line-height: 30px;
+    }
+
+    .product-video {
+        padding: 0 0;
+        padding-bottom: 2rem;
+        margin: 0 4px;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        background-color: white;
+    }
+
+    .video-title h2 {
+        font-weight: 700;
+        padding: 0;
+        font-size: 1.5rem;
+        line-height: 30px;
+        width: 100%;
+    }
+
+    .extra-photo {
+        margin-top: 1rem;
+    }
+
+    .background-photo {
+        background-image: url('../images/kara-eads-1506373-unsplash.jpg');
+        background-color: #cccccc;
+        height: 90vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .image-overlay img {
+        top: 60%;
+        left: -9%;
+        width: 100%;
+        height: 30%;
+    }
+
+    .text-overlay {
+        top: 14%;
+        left: -35%;
+    }
+
+    .download-pdf {
+        top: 0;
+        left: 25%;
+        width: 75%;
+        height: 17%;
+    }
+
+    .download-pdf a {
+        font-size: 1rem;
+    }
+
+    .download-pdf a .icon {
+        margin-right: 15px;
+        font-size: 32px;
     }
 }
