@@ -24,11 +24,15 @@ header #menu div:not(:nth-last-child(-n+3)) a {
     font-size: 13px;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 3px 0;
+    padding: 3px 3px;
 }
 
-header #menu div:hover:not(:nth-last-child(-n+3)) {
-    background: linear-gradient(to bottom, white 40%, #ffdd0096);
+header #menu div:hover:not(:nth-last-child(-n+3)) a {
+    background: linear-gradient(to bottom, white 50%, #ffdd0096 50%);
+}
+
+.menu-link-active {
+    background: linear-gradient(to bottom, white 50%, #ffdd0096 50%);
 }
 
 #navigation .icon {
@@ -76,6 +80,14 @@ div#menu {
     text-decoration: none;
 }
 
+#product-mobile-menu li:hover{
+    background: #ffdd00;
+}
+
+#product-mobile-menu li:hover a{
+    color: white;
+}
+
 #product-mobile-menu .active {
     background: #ffdd00;
     color: white;
@@ -119,12 +131,11 @@ div#menu {
     top: 17rem;
     z-index: 1000;
     height: calc(100vh - 20rem);
-    /* top: 25%;
-    z-index:100; */
 }
 
 .sidebar div {
     margin: 1.5rem 0;
+    padding-right: 0.8rem;
 }
 
 .sidebar div a {
@@ -133,6 +144,12 @@ div#menu {
     font-weight: bold;
     letter-spacing: 1px;
     font-size: 85%;
+    padding: 2px 4px;
+    padding-left: 300px;
+}
+
+.sidebar div a:hover {
+    background: linear-gradient(to bottom, #f0f0f0 50%, #ffdd0096 50%);
 }
 
 .sidebar div ul li {
@@ -143,20 +160,22 @@ div#menu {
     font-size: 24px;
 }
 
+.sidebar-link-active {
+    background: linear-gradient(to bottom, #f0f0f0 50%, #ffdd0096 50%);
+}
 #menu-options-overlay {
     position: absolute;
     top: 45%;
-    left: 30%;
+    left: 25%;
     transform: translate(-50%, -50%) rotate(-90deg);
 }
 
 #menu-options-overlay h3 {
-    font-size: 17vh;
+    font-size: 15vh;
     font-weight: bold;
     color: white;
     transform: scaleY(0.9);
 }
-
 
 /* //product-details */
 
@@ -222,7 +241,7 @@ div#menu {
     margin-right: 5px;
 }
 
-hr {
+.product hr {
     color: #e3e3e3a2;
     width: 80%;
     margin-left: 0;
@@ -311,7 +330,6 @@ hr {
     padding: 0 30px;
     text-align: justify;
     font-weight: 300;
-    /* max-height: 70%; */
 }
 
 .description-image img {
@@ -413,7 +431,7 @@ hr {
     left: 75%;
     width: 25%;
     height: 16%;
-    background-color: #ffd900;
+    background-color: #f7cf33;
     color: black;
     text-decoration: none;
     text-align: center;
@@ -458,4 +476,156 @@ hr {
     margin-right: 10px;
     width: 80px;
     border-bottom: 1px solid black;
+}
+
+/*testimonials*/
+#testimonials {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+#testimonials h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: black;
+    margin-bottom: 2.5rem;
+}
+
+#testimonials .all-ratings span {
+    font-size: 16px;
+}
+
+#testimonials .all-ratings span.text-muted {
+    font-size: 12px;
+}
+
+#testimonials img {
+    height: 40px;
+    width: 40px;
+}
+
+.review-details {
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.review-details p {
+    margin: 0;
+}
+
+.review-details p:first-of-type {
+    font-weight: 700;
+}
+
+.review-details p:last-of-type {
+    font-size: 12px;
+}
+
+.review p {
+    margin: 0;
+    font-weight: 700;
+}
+
+.review span {
+    font-size: 14px;
+}
+
+.review-text {
+    margin: 15px 0;
+}
+
+.review-text p {
+    font-weight: 300;
+    text-align: justify;
+}
+
+#testimonials a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+/*related-products*/
+
+#related-products {
+    margin: 6rem 0;
+    padding-left: 4rem;
+}
+
+#related-products h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: black;
+    margin-bottom: 3rem;
+}
+
+#related-products .bg-white {
+    padding-right: 0;
+    border-right: 2px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+#related-products .item-details p {
+    margin: 0;
+}
+
+#related-products .item-details p:first-of-type {
+    font-weight: 700;
+    margin: 0;
+    margin-top: 10px;
+}
+
+#related-products .item-details p:last-of-type span:last-of-type {
+    color: #383838;
+    font-weight: 700;
+}
+
+/*footer*/
+
+footer {
+    margin-top: 2rem;
+    padding: 0;
+    padding-top: 3rem;
+    background-color: #f7cf33;
+    color: rgba(0, 0, 0, 0.925);
+}
+
+.footer-heading {
+    padding: 5rem 0;
+}
+
+.footer-heading h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.footer-heading hr {
+    color: #e3e3e3a2;
+    width: 50%;
+}
+
+.footer-links {
+    padding: 2rem 0;
+    padding-left: 4rem;
+}
+
+#footer-nav-links div a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+footer img {
+    width: 30px;
+    height: auto;
+}
+
+footer .icon {
+    font-size: 24px;
 }

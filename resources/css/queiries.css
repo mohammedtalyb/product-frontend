@@ -17,7 +17,6 @@
 
     .description-text p {
         font-size: 0.84rem;
-        ;
     }
 
     .description-heading {
@@ -42,6 +41,16 @@
     .download-pdf {
         top: 89%;
     }
+
+    /*testimonials*/
+    #testimonials {
+        padding-left: 4rem;
+        padding-right: 2rem;
+    }
+
+    .footer-links {
+        padding-left: 2.5rem;
+    }
 }
 
 @media (max-width: 992px) {
@@ -49,6 +58,9 @@
         width: 75%;
     }
 
+    .sidebar div {
+        padding-right: 0;
+    }
     .sidebar div ul li {
         margin-left: 10px;
     }
@@ -127,6 +139,31 @@
     .download-pdf a .icon {
         margin-right: 10px;
         font-size: 24px;
+    }
+
+    #testimonials {
+        padding-right: 3rem;
+    }
+
+    #testimonials h2 {
+        margin-bottom: 2rem;
+    }
+
+    #related-products {
+        margin-top: 5rem;
+        padding-left: 3rem;
+    }
+
+    .footer-heading {
+        padding: 4rem 0;
+    }
+
+    .footer-links {
+        padding-left: 2rem;
+    }
+
+    footer .icon {
+        font-size: 20px;
     }
 }
 
@@ -219,6 +256,33 @@
     .download-pdf a .icon {
         margin-right: 5px;
         font-size: 20px;
+    }
+
+    #testimonials {
+        padding-left: 2rem;
+    }
+
+    #testimonials h2 {
+        margin-bottom: 1rem;
+    }
+
+    #related-products {
+        margin-top: 4rem;
+        padding-left: 2rem;
+    }
+
+    footer {
+        margin-top: 0rem;
+        padding: 0;
+        padding-top: 3rem;
+    }
+
+    .footer-heading {
+        padding: 3rem 0;
+    }
+
+    .footer-links {
+        padding-left: 1rem;
     }
 }
 
@@ -347,5 +411,44 @@
     .download-pdf a .icon {
         margin-right: 15px;
         font-size: 32px;
+    }
+
+    #testimonials {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #testimonials h2 {
+        margin-bottom: 1rem;
+    }
+
+    #related-products {
+        margin: 3rem 0;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    #related-products h2 {
+        margin-bottom: 2rem;
+    }
+
+    footer {
+        padding-top: 1rem;
+    }
+
+    .footer-links {
+        padding-left: 0;
+    }
+
+    #footer-nav-links div {
+        margin: 1rem 0;
+    }
+
+    footer .icon {
+        font-size: 24px;
+    }
+
+    footer ul li {
+        margin: 1.5rem;
     }
 }
