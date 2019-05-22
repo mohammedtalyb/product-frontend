@@ -1,3 +1,17 @@
+html {
+    scroll-behavior: smooth;
+}
+.animation-overlay {
+    background-color: #f0f0f0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition-property: left, width;
+    transition-duration: 3s;
+    z-index: 999;
+}
 body {
     font-family: 'Lato', sans-serif;
     /* background-color: #e3e3e3a2; */
@@ -62,9 +76,13 @@ div#menu {
 /* product mobile menu */
 
 #product-mobile-menu {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     border-top: 1px solid #e3e3e3a2;
     background: white;
     margin-bottom: 1rem;
+    box-shadow: 0px 2px 5px -2px grey;
 }
 
 #product-mobile-menu li {
@@ -319,7 +337,7 @@ div#menu {
     /* margin: 6rem 0; */
     margin-top: 6rem;
     margin-bottom: 6rem;
-    transform: scaleY(1.1);
+    /* transform: scaleY(1.1); */
     padding-right: 0px;
     background-color: #f0f0f0;
 }
@@ -459,7 +477,11 @@ div#menu {
     position: absolute;
     top: 14%;
     left: -3%;
-    transform: rotate(-90deg);
+    transform: rotate(-90deg) translateX(-30%);
+    transition-property: transform, opacity;
+    transition-duration: 3s;
+    transition-delay: 1s;
+    opacity: 0;
 }
 
 .text-overlay p span {

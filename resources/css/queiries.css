@@ -29,17 +29,28 @@
         letter-spacing: 1px;
     }
 
+    .text-overlay {
+        left: -1%;
+    }
+    .text-overlay p span {
+        font-size: 12px;
+    }
+    .text-overlay span::before {
+        top: 9px;
+        width: 70px;
+    }
+    
     .extra-photo img {
-        transform: scaleY(1.1);
+        /* transform: scaleY(1.1); */
     }
 
     .image-overlay img {
-        top: 65%;
+        /* top: 65%; */
         left: 8%;
     }
 
     .download-pdf {
-        top: 89%;
+        /* top: 89%; */
     }
 
     /*testimonials*/
@@ -394,7 +405,10 @@
 
     .text-overlay {
         top: 14%;
-        left: -35%;
+        left: -36%;
+    }
+    .text-overlay p span {
+        font-size: 14px;
     }
 
     .download-pdf {
