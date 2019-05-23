@@ -28,7 +28,13 @@
             <div>
                 <a href="#" class=""><i class="icon ion-ios-search"></i></a>
                 <a href="#" class=""><i class="icon ion-ios-heart-empty"></i></a>
-                <a href="#" class=""><i class="icon ion-ios-cart"></i></a>
+                <a href="#" class="">
+                    <i class="icon ion-ios-cart" style="position: relative;">
+                        <span class="cart-size">
+                            <span>0</span>
+                        </span>
+                    </i>
+                </a>
             </div>
         </div>
         <a href="#" class="navbar-brand d-none d-md-block"><img src="./resources/images/1_Apple_400.png" alt=""></a>
@@ -55,7 +61,13 @@
                 <a href="#" class=""><i class="icon ion-ios-heart-empty"></i></a>
             </div>
             <div class="">
-                <a href="#" class=""><i class="icon ion-ios-cart"></i></a>
+                <a href="#" class="">
+                    <i class="icon ion-ios-cart" style="position: relative;">
+                        <span class="cart-size">
+                            <span>0</span>
+                        </span>
+                    </i>
+                </a>
             </div>
         </div>
     </header>
@@ -72,7 +84,7 @@
         </ul>
     </div>
 
-    <ul class="nav d-md-none mb-4 mb-sm-0 ml-sm-5" id="product-mobile-menu" >
+    <ul class="nav d-md-none mb-4 mb-sm-0 ml-sm-5" id="product-mobile-menu">
         <li class="active"><a href="#details">DETAILS</a></li>
         <li><a href="#description">DESCRIPTION</a></li>
         <li><a href="#testimonials">REVIEWS</a></li>
@@ -105,7 +117,7 @@
             <!-- <div class="col-md-1"></div> -->
 
             <div class="col-12 col-md-10 col-lg-9 col-sm-12">
-                    <section class="row  product  mt-md-0 ml-sm-5 ml-md-0 " id="details">
+                <section class="row  product  mt-md-0 ml-sm-5 ml-md-0 " id="details">
                     <div class="col-12 col-md-7 col-sm-6 bg-white product-image">
                         <div class="square">
                             <img src="resources/images/nathan-fertig-249917-unsplash.jpg" class="" alt="">
@@ -118,11 +130,16 @@
                             </b>
                         </h2>
                         <div class="ratings">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
+                            <span onmouseover="starmark(this)" onclick="starmark(this)" id="1"
+                                class="fa fa-star checked"></span>
+                            <span onmouseover="starmark(this)" onclick="starmark(this)" id="2"
+                                class="fa fa-star "></span>
+                            <span onmouseover="starmark(this)" onclick="starmark(this)" id="3"
+                                class="fa fa-star "></span>
+                            <span onmouseover="starmark(this)" onclick="starmark(this)" id="4"
+                                class="fa fa-star"></span>
+                            <span onmouseover="starmark(this)" onclick="starmark(this)" id="5"
+                                class="fa fa-star"></span>
                             <span class="ml-2 text-muted">(23)</span>
                         </div>
                         <div class="price mt-3">
@@ -153,85 +170,92 @@
                             </ul>
                         </div>
                         <ul class="quantity nav mt-4">
-                            <li style="color: #47474793; cursor: pointer;">&mdash;</li>
-                            <li>1</li>
-                            <li style="color: #47474793; cursor: pointer;">&#43;</li>
-                            <li style="cursor: pointer"><b>ADD TO CART</b></li>
+                            <li style="color: #47474793; cursor: pointer;" id="add-quantity" onclick="deleteQuantity()">
+                                &mdash;</li>
+                            <li id="no-of-items">1</li>
+                            <li style="color: #47474793; cursor: pointer;" id="delete-quantiy" onclick="addQuantity()">
+                                &#43;</li>
+                            <li style="cursor: pointer" id="add-to-cart" onclick="addToCart()"><b>ADD TO CART</b></li>
                         </ul>
                     </div>
                 </section>
                 <section id="description">
-                <div class="row description ">
-                    <div class="col-sm-5 col-lg-4 col-md-5 description-text">
-                        <p class="d-none d-sm-block">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
-                            blanditiis aspernatur rerum quidem dolores quos. Rem cumque sapiente sit consequuntur,
-                            impedit maxime recusandae a nihil ipsa nam quae repellendus exercitationem harum architecto
-                            voluptate quas tempora animi in optio magni. Optio?</p>
-                        <p class="d-none d-xl-block">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti
-                            labore modi debitis facere distinctio magnam cum, ipsam atque tempora mollitia</p>
-                        <p class="d-none d-md-block d-lg-none">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                            Impedit, doloribus.</p>
-                    </div>
-                    <div class="col-sm-7 col-lg-8 col-md-7 description-image pr-sm-0">
-                        <img src="./resources/images/ian-dooley-331063-unsplash.jpg" class="" alt="">
-                        <div class="description-heading mt-5 mb-2 d-sm-none">
-                            <h2><b>Lorem ipsum dolor sit amet consectetur!</b></h2>
-                        </div>
-                        <div class="description-text">
-                            <p class="d-sm-none">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
+                    <div class="row description ">
+                        <div class="col-sm-5 col-lg-4 col-md-5 description-text">
+                            <p class="d-none d-sm-block">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                Delectus
                                 blanditiis aspernatur rerum quidem dolores quos. Rem cumque sapiente sit consequuntur,
                                 impedit maxime recusandae a nihil ipsa nam quae repellendus exercitationem harum
-                                architecto voluptate quas tempora animi in optio magni. Optio?</p>
-                            <p class="d-sm-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
-                                architecto!</p>
+                                architecto
+                                voluptate quas tempora animi in optio magni. Optio?</p>
+                            <p class="d-none d-xl-block">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Corrupti
+                                labore modi debitis facere distinctio magnam cum, ipsam atque tempora mollitia</p>
+                            <p class="d-none d-md-block d-lg-none">Lorem ipsum dolor, sit amet consectetur adipisicing
+                                elit.
+                                Impedit, doloribus.</p>
                         </div>
-                    </div>
-
-                    <div class="description-heading d-none d-sm-block">
-                        <h2><b>Lorem ipsum dolor sit amet amet consectetur!</b></h2>
-                    </div>
-
-                </div>
-                <div class="row product-video slide">
-                    <div class="col-12 pr-sm-0">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <video id="myVideo"
-                                src="./resources/videos/Sofa Set For living Room 2018 I Living room interior design.mp4"
-                                type="video/mp4">"></video>
-                            <div class="video-overlay"></div>
-                            <div class="play-button-overlay">
-                                <a href="#" id="play" onclick="play(event);"><i class="icon ion-ios-play"></i></a>
+                        <div class="col-sm-7 col-lg-8 col-md-7 description-image pr-sm-0">
+                            <img src="./resources/images/ian-dooley-331063-unsplash.jpg" class="" alt="">
+                            <div class="description-heading mt-5 mb-2 d-sm-none">
+                                <h2><b>Lorem ipsum dolor sit amet consectetur!</b></h2>
                             </div>
-                            <div class="video-title-overlay d-none d-sm-block">
-                                <h2><b>Lorem ipsum dolor sit amet amet consectetur!</b></h2>
+                            <div class="description-text">
+                                <p class="d-sm-none">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
+                                    blanditiis aspernatur rerum quidem dolores quos. Rem cumque sapiente sit
+                                    consequuntur,
+                                    impedit maxime recusandae a nihil ipsa nam quae repellendus exercitationem harum
+                                    architecto voluptate quas tempora animi in optio magni. Optio?</p>
+                                <p class="d-sm-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
+                                    architecto!</p>
                             </div>
                         </div>
-                        <div class="video-title d-sm-none mt-5 mb-2">
+
+                        <div class="description-heading d-none d-sm-block">
                             <h2><b>Lorem ipsum dolor sit amet amet consectetur!</b></h2>
                         </div>
-                        <div class="animation-overlay"></div>
-                    </div>
-                    
-                </div>
 
-                <div class="row ">
-                    <div class="col-12 pr-sm-0 extra-photo slide">
-                        <div class="background-photo">
-                            <img src="./resources/images/kara-eads-1506373-unsplash.jpg"
-                                class="img-fluid d-none d-sm-block" alt="">
-                            <div class="image-overlay">
-                                <img src="./resources/images/annie-spratt-294447-unsplash.jpg" class="" alt="">
-                            </div>
-                            <div class="download-pdf">
-                                <a href="#"><i class="icon ion-ios-download"></i> DOWNLOAD PDF</a>
-                            </div>
-                            <div class="text-overlay d-sm-none d-lg-block">
-                                <P><span>SUGGESTED ACCOMODATIONS</span></P>
-                            </div>
-                        </div>
-                        <div class="animation-overlay"></div>
                     </div>
-                </div>
+                    <div class="row product-video slide">
+                        <div class="col-12 pr-sm-0">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <video id="myVideo"
+                                    src="./resources/videos/Sofa Set For living Room 2018 I Living room interior design.mp4"
+                                    type="video/mp4">"></video>
+                                <div class="video-overlay"></div>
+                                <div class="play-button-overlay">
+                                    <a href="#" id="play" onclick="play(event);"><i class="icon ion-ios-play"></i></a>
+                                </div>
+                                <div class="video-title-overlay d-none d-sm-block">
+                                    <h2><b>Lorem ipsum dolor sit amet amet consectetur!</b></h2>
+                                </div>
+                            </div>
+                            <div class="video-title d-sm-none mt-5 mb-2">
+                                <h2><b>Lorem ipsum dolor sit amet amet consectetur!</b></h2>
+                            </div>
+                            <div class="animation-overlay"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="row ">
+                        <div class="col-12 pr-sm-0 extra-photo slide">
+                            <div class="background-photo">
+                                <img src="./resources/images/kara-eads-1506373-unsplash.jpg"
+                                    class="img-fluid d-none d-sm-block" alt="">
+                                <div class="image-overlay">
+                                    <img src="./resources/images/annie-spratt-294447-unsplash.jpg" class="" alt="">
+                                </div>
+                                <div class="download-pdf">
+                                    <a href="#"><i class="icon ion-ios-download"></i> DOWNLOAD PDF</a>
+                                </div>
+                                <div class="text-overlay d-sm-none d-lg-block">
+                                    <P><span>SUGGESTED ACCOMODATIONS</span></P>
+                                </div>
+                            </div>
+                            <div class="animation-overlay"></div>
+                        </div>
+                    </div>
                 </section>
                 <section class="row my-sm-4 my-md-5 mt-0 " id="testimonials">
                     <div class="col-12">

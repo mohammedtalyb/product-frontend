@@ -1,42 +1,57 @@
-    <!-- <header class="px-md-5 px-3 pb-2 pt-3 py-md-4 px-sm-4 ml-md-5" id="navigation">
-         <div class="mobile-menu d-flex justify-content-between d-md-none">
-            <div onclick="clickMenu()">
-                <a href="#"><i class="icon ion-ios-menu"></i></a>
-            </div>
-            <div>
-                <a href="#" class="logo"><img src="./resources/images/1_Apple_400.png" alt=""></a>
-            </div>
-            <div>
-                <a href="#" class=""><i class="icon ion-ios-search"></i></a>
-                <a href="#" class=""><i class="icon ion-ios-heart-empty"></i></a>
-                <a href="#" class=""><i class="icon ion-ios-cart"></i></a>
-            </div>
-        </div>
-        <a href="#" class="navbar-brand d-none d-md-block"><img src="./resources/images/1_Apple_400.png" alt=""></a>
-        <div class="d-md-flex text-center justify-content-between ml-md-auto  d-none" id="menu">
-            <div class="">
-                <a href="#" class="">bedroom</a>
-            </div>
-            <div class="">
-                <a href="#" class="">living room</a>
-            </div>
-            <div class="">
-                <a href="#" class="">office</a>
-            </div>
-            <div class="">
-                <a href="#" class="">kitchen</a>
-            </div>
-            <div class="">
-                <a href="#" class="">bathroom</a>
-            </div>
-            <div class="">
-                <a href="#" class=""><i class="icon ion-ios-search"></i></a>
-            </div>
-            <div class="">
-                <a href="#" class=""><i class="icon ion-ios-heart-empty"></i></a>
-            </div>
-            <div class="">
-                <a href="#" class=""><i class="icon ion-ios-cart"></i></a>
-            </div>
-        </div>
-    </header> -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Font Awesome Icon Library -->
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+.checked {
+    color: orange;
+    
+}
+</style>
+</head>
+<body>
+
+
+<span  onmouseover="starmark(this)" onclick="starmark(this)" id="1one" style="font-size:40px;cursor:pointer;"  class="fa fa-star checked"></span>
+<span onmouseover="starmark(this)" onclick="starmark(this)" id="2one"  style="font-size:40px;cursor:pointer;" class="fa fa-star "></span>
+<span onmouseover="starmark(this)" onclick="starmark(this)" id="3one"  style="font-size:40px;cursor:pointer;" class="fa fa-star "></span>
+<span onmouseover="starmark(this)" onclick="starmark(this)" id="4one"  style="font-size:40px;cursor:pointer;" class="fa fa-star"></span>
+<span onmouseover="starmark(this)" onclick="starmark(this)" id="5one"  style="font-size:40px;cursor:pointer;" class="fa fa-star"></span>
+<br/>
+<textarea  style="margin-top:5px;" class="form-control" rows="3" id="comment" placeholder="Enter your review"></textarea>
+
+<button  onclick="result()" type="button" style="margin-top:10px;margin-left:5px;" class="btn btn-lg btn-success">Submit</button>
+</body>
+<script>
+var count;
+function starmark(item)
+{
+count=item.id[0];
+sessionStorage.starRating = count;
+var subid= item.id.substring(1);
+for(var i=0;i<5;i++)
+{
+if(i<count)
+{
+document.getElementById((i+1)+subid).style.color="orange";
+}
+else
+{
+document.getElementById((i+1)+subid).style.color="black";
+}
+}
+}
+function result()
+{
+//Rating : Count
+//Review : Comment(id)
+alert("Rating : "+count+"\nReview : "+document.getElementById("comment").value);
+}
+</script>
+</html>

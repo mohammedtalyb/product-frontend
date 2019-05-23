@@ -32,14 +32,16 @@
     .text-overlay {
         left: -1%;
     }
+
     .text-overlay p span {
         font-size: 12px;
     }
+
     .text-overlay span::before {
         top: 9px;
         width: 70px;
     }
-    
+
     .extra-photo img {
         /* transform: scaleY(1.1); */
     }
@@ -72,6 +74,7 @@
     .sidebar div {
         padding-right: 0;
     }
+
     .sidebar div ul li {
         margin-left: 10px;
     }
@@ -293,7 +296,7 @@
     }
 
     .footer-links {
-        padding-left: 1rem;
+        padding-left: 0;
     }
 }
 
@@ -367,7 +370,6 @@
 
     .product-video {
         padding: 0 0;
-        padding-bottom: 2rem;
         margin: 0 4px;
         margin-top: 5rem;
         margin-bottom: 5rem;
@@ -380,6 +382,7 @@
         font-size: 1.5rem;
         line-height: 30px;
         width: 100%;
+        margin-bottom: 2rem;
     }
 
     .extra-photo {
@@ -407,6 +410,7 @@
         top: 14%;
         left: -36%;
     }
+
     .text-overlay p span {
         font-size: 14px;
     }

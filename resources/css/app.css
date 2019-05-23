@@ -1,6 +1,7 @@
 html {
     scroll-behavior: smooth;
 }
+
 .animation-overlay {
     background-color: #f0f0f0;
     position: absolute;
@@ -9,9 +10,10 @@ html {
     height: 100%;
     width: 100%;
     transition-property: left, width;
-    transition-duration: 3s;
+    transition-duration: 2s;
     z-index: 999;
 }
+
 body {
     font-family: 'Lato', sans-serif;
     /* background-color: #e3e3e3a2; */
@@ -27,7 +29,7 @@ header img {
     height: auto;
 }
 
-header #menu {
+ #menu   {
     margin-top: -40px;
 }
 
@@ -73,6 +75,24 @@ div#menu {
     transform: translate(-50%, -50%);
 }
 
+.cart-size {
+    position: absolute;
+    top: -28%;
+    left: 61%;
+    font-size: 12px;
+    background: #ffdd00;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+.cart-size span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* product mobile menu */
 
 #product-mobile-menu {
@@ -98,11 +118,11 @@ div#menu {
     text-decoration: none;
 }
 
-#product-mobile-menu li:hover{
+#product-mobile-menu li:hover {
     background: #ffdd00;
 }
 
-#product-mobile-menu li:hover a{
+#product-mobile-menu li:hover a {
     color: white;
 }
 
@@ -181,6 +201,7 @@ div#menu {
 .sidebar-link-active {
     background: linear-gradient(to bottom, #f0f0f0 50%, #ffdd0096 50%);
 }
+
 #menu-options-overlay {
     position: absolute;
     top: 45%;
@@ -239,13 +260,14 @@ div#menu {
 
 .ratings span {
     font-size: 16px;
+    cursor: pointer;
 }
 
-.ratings span:nth-of-type(5) {
+.ratings span {
     color: #e3e3e3a2;
 }
 
-.checked {
+.ratings .checked {
     color: #ffdd00;
 }
 
@@ -412,6 +434,9 @@ div#menu {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 20;
+    opacity: 0;
+    transition: opacity 0.8s;
+    transition-delay: 1s;
 }
 
 .product-video a i.icon {
@@ -433,6 +458,7 @@ div#menu {
 .extra-photo {
     margin: 6rem 0;
     padding-left: 7rem;
+    overflow-x: hidden;
 }
 
 .image-overlay img {
@@ -455,6 +481,8 @@ div#menu {
     text-align: center;
     font-weight: 700;
     font-size: 16px;
+    transition: left 1s;
+    transition-delay: 1.5s
 }
 
 .download-pdf a {
@@ -479,7 +507,7 @@ div#menu {
     left: -3%;
     transform: rotate(-90deg) translateX(-30%);
     transition-property: transform, opacity;
-    transition-duration: 3s;
+    transition-duration: 2s;
     transition-delay: 1s;
     opacity: 0;
 }
