@@ -200,6 +200,10 @@
         padding: 5px 0;
     }
 
+    .menu-link-active {
+        background: transparent;
+    }
+
     .product {
         margin-top: 4rem;
         padding-left: 1rem;
@@ -338,7 +342,8 @@
         margin-top: 5rem;
         margin-bottom: 5rem;
         background-color: white;
-        transform: scale(1);
+        -webkit-transform: scale(1);
+                transform: scale(1);
     }
 
     .description-image img {

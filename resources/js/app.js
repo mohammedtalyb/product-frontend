@@ -1,3 +1,6 @@
+/**
+ * this function toggles between visibility of menu items and close logo
+ */
 function clickMenu() {
   var menuBar = document.querySelector('#menu');
   var menuButton = document.querySelector('#menuButton');
@@ -5,14 +8,16 @@ function clickMenu() {
   if (menuButton.classList.contains("ion-ios-menu")) {
     menuButton.classList.remove('ion-ios-menu');
     menuButton.classList.add('ion-ios-close');
-    // menuBar.style.height = '100%';
   } else {
     menuButton.classList.remove('ion-ios-close');
     menuButton.classList.add('ion-ios-menu');
   }
 }
 
-
+/**
+ * this function highlights the star for ratings
+ * @param {object} item - contains the element on which mouseOver event takes place 
+ */
 function starmark(item) {
   var count;
   count = item.id;
@@ -25,14 +30,30 @@ function starmark(item) {
     }
   }
 }
+
+/**
+ * it add a tick to selected color
+ * @param {object} item -contains the element on which click event takes place 
+ */
+function selectColor(item) {
+  const productColorsElement = document.querySelectorAll('.product-color li i');
+  productColorsElement.forEach(element => element.classList.remove('ion-ios-checkmark'));
+  item.children[0].classList.add('ion-ios-checkmark');
+
+}
 var items = 1;
+/**
+ * it increases the quanity of items by one
+ */
 function addQuantity() {
-  // var addButton = document.getElementById('add-quantiy');
   var noOfItems = document.getElementById('no-of-items');
   items++;
   noOfItems.innerText = items;
 }
 
+/**
+ * it decreases the quanity of items by one
+ */
 function deleteQuantity() {
   var noOfItems = document.getElementById('no-of-items');
   if (items > 1) {
@@ -41,7 +62,9 @@ function deleteQuantity() {
   noOfItems.innerText = items;
 }
 
-
+/**
+ * it adds number of items to cart
+ */
 function addToCart() {
   var cartElements = document.querySelectorAll('.cart-size span');
   cartElements.forEach(cartElement => {
@@ -51,6 +74,10 @@ function addToCart() {
   });
 }
 
+/**
+ * it plays the video and hides the play button
+ * @param {object} event - details of event occured by clicking 
+ */
 function play(event) {
   var video = document.querySelector('#myVideo');
   var videoOverlay = document.querySelector('.video-overlay');
@@ -61,40 +88,34 @@ function play(event) {
   video.play();
 }
 
-
-const desktopMenulinks = document.querySelectorAll('.sidebar div a');
-const mobileMenuLinks = document.querySelectorAll('#product-mobile-menu li')
 const sections = document.querySelectorAll('section');
-
+window.addEventListener('scroll', changeLinkState);
+/**
+ * it changes the active link and link overlay text when particular section shows up on view on scroll
+ */
 function changeLinkState() {
-  for (let index = 0; index < sections.length; index++) {
-    if (sections[index].offsetTop <= window.scrollY) {
+  const desktopMenulinks = document.querySelectorAll('.sidebar div a');
+  const mobileMenuLinks = document.querySelectorAll('#product-mobile-menu li')
+  const menuItemOverlay = document.querySelector('#menu-options-overlay h3');
+
+  for (let index = sections.length - 1; index >= 0; index--) {
+    if (sections[index].offsetTop < window.scrollY) {
       desktopMenulinks.forEach((link) => link.classList.remove('sidebar-link-active'));
       desktopMenulinks[index].classList.add('sidebar-link-active');
+      menuItemOverlay.innerText = sections[index].getAttribute('data-menu-item');
       mobileMenuLinks.forEach((link) => link.classList.remove('active'));
       mobileMenuLinks[index].classList.add('active');
+      break;
     }
   }
 }
-changeLinkState();
-window.addEventListener('scroll', changeLinkState);
 
-
-// function debounce(func, wait = 20, immediate = true) {
-//   var timeout;
-//   return function () {
-//     var context = this, args = arguments;
-//     var later = function () {
-//       timeout = null;
-//       if (!immediate) func.apply(context, args);
-//     };
-//     var callNow = immediate && !timeout;
-//     clearTimeout(timeout);
-//     timeout = setTimeout(later, wait);
-//     if (callNow) func.apply(context, args);
-//   };
-// };
 const sectionsToSlide = document.querySelectorAll('.slide');
+window.addEventListener('scroll', checkSlide);
+
+/**
+ * it will run an animation when particular section shows up on view on scroll
+ */
 function checkSlide() {
   sectionsToSlide.forEach(sectionToSlide => {
     const slideInAt = (window.scrollY + window.innerHeight) - sectionToSlide.offsetHeight;
@@ -111,4 +132,35 @@ function checkSlide() {
     }
   });
 }
-window.addEventListener('scroll', checkSlide);
+
+// function changeLink() {
+//   const tp1 = document.querySelector('#menu-options-overlay h3');
+//   const sectionDetails = document.getElementById('details');
+//   const sectionDescription = document.getElementById('description');
+//   const sectionTestimonials = document.getElementById('testimonials');
+//   const sectionRelatedProducts = document.getElementById('related-products');
+//   const isDetails = sectionDetails.offsetTop < window.scrollY;
+//   const isDescription = sectionDescription.offsetTop < window.scrollY;
+//   const isTestimonials = sectionTestimonials.offsetTop < window.scrollY;
+//   const isRelatedProducts = sectionRelatedProducts.offsetTop < window.scrollY;
+//   switch (true) {
+//     case isRelatedProducts:
+//         desktopMenulinks.forEach((link) => link.classList.remove('sidebar-link-active'));
+//         desktopMenulinks[3].classList.add('sidebar-link-active');
+//       break;
+//     case isTestimonials:
+//         desktopMenulinks.forEach((link) => link.classList.remove('sidebar-link-active'));
+//         desktopMenulinks[2].classList.add('sidebar-link-active');
+//       break;
+//     case isDescription:
+//         desktopMenulinks.forEach((link) => link.classList.remove('sidebar-link-active'));
+//         desktopMenulinks[1].classList.add('sidebar-link-active');
+//         tp1.innerText = 'description';
+//       break;
+//     case isDetails:
+//         desktopMenulinks.forEach((link) => link.classList.remove('sidebar-link-active'));
+//         desktopMenulinks[0].classList.add('sidebar-link-active');
+//       break;
+//   }
+// }
+// window.addEventListener('scroll', changeLink);
